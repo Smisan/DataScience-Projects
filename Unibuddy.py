@@ -1,17 +1,10 @@
 '''
-Imagine the first day of university for a freshman named Alex. 
-Alex is excited but also overwhelmed by the vast campus, numerous courses, and the sea of new faces. 
-To aid new students like Alex, the university's IT department has developed a personalised chatbot. 
-This chatbot, named "UniBuddy", is designed to make the transition smoother for freshmen.
-Upon accessing the chatbot, Alex is prompted to enter their name, favourite colour, and age. 
-Based on this input, UniBuddy offers a personalised greeting.
-For instance, if Alex's favourite colour is blue,
-    UniBuddy might suggest joining the university's "Blue Art Club".
-If Alex is 18, the chatbot might provide information about freshman-specific events.
-The chatbot also offers a feature where Alex can input specific queries, like "Where is the library?"
-    or "How do I join the debate club?", 
-        and UniBuddy responds with relevant information, all while adhering to a friendly tone,
-        using string transformation methods to ensure the responses feel personalised and engaging.
+UniBuddy is a personalized chatbot designed to assist freshmen with their transition to university life. 
+It offers a friendly interface where users can input their name, favorite color, and age to receive personalized 
+greetings and information tailored to their interests and needs.
+Upon accessing the chatbot, users are prompted to enter their name, favorite color, and age. UniBuddy offers a personalized greeting based on this input.
+UniBuddy provides recommendations based on user preferences. For example, if the user's favorite color is blue, UniBuddy might suggest joining the university's "Blue Art Club."
+Users can input specific queries, such as "Where is the library?" or "How do I join the debate club?" UniBuddy responds with relevant information in a friendly tone.
 '''
 
 # storing FAQs and answers in separate lists
@@ -45,18 +38,19 @@ while True:
     if not user_name.isalpha():
         print("You have entered a number or symbol. Please try again! ")
 
+    # Exit the loop if a valid alphabetical input is entered
     else:
-        break # Exit the loop if a valid alphabetical input is entered
+        break 
 
 print(f"Hello, {user_name}! Welcome.")
 
 #using a while loop to get the user age until a valid integer is entered
 while True:
 
-    try:#using try-except to handle potential value errors
+    try:
         user_age = int(input("Please enter your age : "))
         if user_age > 0:
-            break# exiting the while loop when a valid age is entered
+            break
 
         else:
             print("Please enter a positive integer as a valid age")
@@ -87,7 +81,7 @@ fav_colour = input("Please enter your favourite colour( Blue, Yellow, Red) :").c
 if not fav_colour.isalpha():
         print("Please choose one of the given options")
     
-while fav_colour not in colour_theme:   #using while loop to ensure that a valid colour from the available list is entered 
+while fav_colour not in colour_theme:   
         print("Please select a colour from the available colours.")
         fav_colour = input("Please enter your favourite colour ( Blue, Yellow, Red) :").capitalize() 
 
@@ -140,21 +134,21 @@ for count, question in enumerate(questions, start =1):
 
 #using a while loop to get the user input for the question number and printing the corresponding answer
 while True: 
-              
+    
         choice = input("Please enter the question number you'd like to ask or bye to exit : ")
      
     
         if choice == 'Bye'.lower():
             print("Thank you for chatting with me. I wish you a successful uni journey!")
-            break #exiting the loop if the user enters 'Bye' 
+            break 
 
-        try: #using try-except to handle potential value errors
-
+        try: 
+            
             index = int(choice) #converting the input to an integer
     
             if 1 <= index <= len(questions):
                 print(f"Question : {questions[index -1]}")
-                print(f"Answer : {answers[index - 1]}") #index - 1, as the indexing starts from 0 in a list
+                print(f"Answer : {answers[index - 1]}") 
         
             else:
                 print( "Invalid question number. Please try again")
