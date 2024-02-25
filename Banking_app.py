@@ -1,14 +1,12 @@
 '''
+
+SecureBank is a robust banking application with a user-friendly interface
+designed to provide a secure and error-free banking experience. It offers 
+a range of features including checking balances, transferring funds between accounts, 
+depositing or withdrawing money, and ensures that transactions are secure and error-free.
 Banking app with a solid user interface, which is user-friendly and robust against potential
         errors and misuse.
-- checking balances
-- transferring funds between accounts
-- depositing or withdrawing money
-- transactions are error-free and secure. 
-- custom exceptions like "InsufficientFundsError"  and  "InvalidAmountError" 
--account limits
--confirmation prompts
-   
+
 '''
 
 import random as rd
